@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Abstract",
+  "version": "1.0",
+
+  "description": "Turns your webpages into abstract elements",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["p5.js","p5.dom.js", "sketch.js","replace.js","replaceImages.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+  "rainbow.png", "1.png", "2.png", "3.png"
+],
+
+  "permissions": [
+    "activeTab"
+  ]
+}
